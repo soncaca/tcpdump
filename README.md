@@ -43,5 +43,7 @@ arp or udp port 53
 
 icmp and \(dst host mrorange or dst host mrbrown\)
 
+tcpdump -D : liệt kê danh sách card mạng
+
 
 
