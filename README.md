@@ -10,12 +10,19 @@ Có thể xem các options bằng cách gõ : `man tcpdump`
 Còn đây là một vài trong số những cái đáng chú ý:
 
 -i interface: chọn giao diện card mạng cần lắng nghe ( eth0,wlan0..)
+
 -v, -vv, -vvv: hiển thị nhiều thông tin.
+
 -q: ít thông tin.
--e: hiển thị thông tin lớp liên kết (MAC Address)-
+
+-e: hiển thị thông tin lớp liên kết (MAC Address)
+
 -N: display relative hostnames.
+
 -t: không in mốc thời gian.
+
 -n: vô hiệu hóa phân giải tên như vậy bạn không phải chờ đợi trên những phản hồi DNS để hiển thị các gói tin.
+
 -s0 (or -s 0): thiết lập số lượng gói tin xuất hiện. 0 có nghĩa là hiển thị đầy đủ gói tin
 
 Biểu thức lọc (Filter Expression)
