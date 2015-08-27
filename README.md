@@ -114,6 +114,33 @@ Một biểu thức đơn có thể cho ta được kết quả mong muốn , nh
 
   `not hoặc ! `
   
+  ví dụ:
+  
+* bắt lưu lượng từ 10.5.2.3 hướng đến cổng 3389
+
+tcpdump -nnvvS src 10.5.2.3 and dst port 3389
+
+* Lưu lượng bắt đầu từ mạng 192.168 cho đến mạng  10 hoặc 172.16 
+
+tcpdump -nvX src net 192.168.0.0/16 and dst net 10.0.0.0/8 or 172.16.0.0/16
+
+*Non-ICMP traffic destined for 192.168.0.2 from the 172.16 network
+
+tcpdump -nvvXSs 1514 dst 192.168.0.2 and src net and not icmp
+
+*Traffic originating from Mars that isn’t to the SSH port
+
+tcpdump -vv src mars and not dst port 22
+
+# Nhóm
+
+có thể nhóm các biểu thức laị với nhau  bằng ` () ` và phải đặt trong dấu ` '' ` -  Dấu nháy đơn được sử dụng để báo cho tcpdump để bỏ qua một số ký tự đặc biệt - trong trường hợp này "()" dấu ngoặc.
+
+*ví dụ:
+` tcpdump src 10.0.2.4 and (dst port 3389 or 22) ` --> sẽ báo lỗi
+
+` tcpdump ‘src 10.0.2.4 and (dst port 3389 or 22)’ ` hoặc  ` tcpdump ‘src 10.0.2.4 and \(dst port 3389 or 22\)’ `  --> đúng
+
   
   
 
