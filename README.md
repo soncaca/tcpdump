@@ -102,6 +102,16 @@ hoặc
 
 tcpdump cho phép bạn lưu lại lưu lượng truy nhập bắt được thành 1 file với tùy chọn : ` -w ` và để đọc lại file đó thì ta sử dụng tùy chọn : ` -r`
 
+* ví dụ : lưu lại thành 1 file
+
+`tcpdump -s 1514 port 80 -w capture_file`
+
+* để đọc lại capture_file
+
+`tcpdump -r capture_file`
+
+
+
 
 
 
