@@ -29,19 +29,7 @@ Biểu thức lọc (Filter Expression)
 
 Các biểu thức lọc là tiêu chuẩn logic (true hoặc false) cho "phù hợp" các gói tin. Tất cả các gói không phù hợp với các biểu thức được bỏ qua. Các cú pháp biểu thức lọc rất mạnh mẽ và linh hoạt. Chủ yếu bao gồm các từ khóa được gọi là primitives, đại diện cho các gói phù hợp với tiêu chuẩn,  chẳng hạn như giao thức, địa chỉ, cổng và điều hướng. Có thể kết hợp các biểu thức and hoặc or, hoặc nhóm lại và lồng vào nhau bằng dấu ngoặc đơn và phủ định với not.
 
-Một vài ví dụ về biểu thức lọc:
 
-tcp
-
-port 25 and not host 10.0.0.3
-
-icmp or arp or udp
-
-vlan 3 and ether src host aa:bb:cc:dd:ee:ff
-
-arp or udp port 53
-
-icmp and \(dst host mrorange or dst host mrbrown\)
 
 tcpdump -D : liệt kê danh sách card mạng
 
@@ -60,7 +48,7 @@ tcpdump -D : liệt kê danh sách card mạng
 
 ` tcpdump net 1.2.3.0/24 `
 
-* bắt goi tin đường truyền dựa trên các giao thức// làm việc với  tcp, udp, and icmp.
+* bắt goi tin đường truyền dựa trên các giao thức// làm việc với  tcp, udp, arp and icmp.
 
 `tcpdump icmp`
 
@@ -125,6 +113,8 @@ Một biểu thức đơn có thể cho ta được kết quả mong muốn , nh
 3) phủ định
 
   `not hoặc ! `
+  
+  
   
 
 
