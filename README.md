@@ -70,7 +70,9 @@ tcpdump -D : liệt kê danh sách card mạng
 
 * src, dst port // lọc dựa trên  source or destination port 
 
-` tcpdump src port 1025 # tcpdump dst port 389`
+` tcpdump src port 1025 `
+
+`tcpdump dst port 389`
 
 * src/dst, port, protocol // kết hợp cả 3
 
