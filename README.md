@@ -98,6 +98,11 @@ hoặc
 
 `tcpdump <= 128`
 
+# Lưu lại lưu lượng capture thành 1 file
+
+tcpdump cho phép bạn lưu lại lưu lượng truy nhập bắt được thành 1 file với tùy chọn : ` -w ` và để đọc lại file đó thì ta sử dụng tùy chọn : ` -r`
+
+
 
 
 
