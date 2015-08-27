@@ -45,5 +45,58 @@ icmp and \(dst host mrorange or dst host mrbrown\)
 
 tcpdump -D : liệt kê danh sách card mạng
 
+* host // tìm kiếm lưu lượng truy cập dựa trên địa chỉ IP (cũng hoạt động với host name  nếu bạn không sử dụng -n)
+
+
+` tcpdump host 1.2.3.4`
+
+*src, dst // bắt gói tin  từ chỉ một nguồn hoặc đích (loại bỏ một phía của một host conversation)
+
+` tcpdump src 2.3.4.5`
+
+`tcpdump dst 3.4.5.6 `
+
+* net // bắt gói tin toàn bộ một mạng
+
+` tcpdump net 1.2.3.0/24 `
+
+* bắt goi tin đường truyền dựa trên các giao thức// làm việc với  tcp, udp, and icmp.
+
+`tcpdump icmp`
+
+* port //  chỉ thấy lưu lượng truy cập đến hoặc từ một cổng nhất định
+
+`tcpdump port 3389`
+
+* src, dst port // lọc dựa trên  source or destination port 
+
+` tcpdump src port 1025 # tcpdump dst port 389`
+
+* src/dst, port, protocol // kết hợp cả 3
+
+` tcpdump src port 1025 and tcp`
+
+` tcpdump udp and src port 53`
+
+Bạn cũng có tùy chọn để lọc theo một loạt các port thay vì khai báo, riêng lẻ, và chỉ thấy các gói tin đó là trên hoặc dưới một kích thước nhất định.
+
+* Port Ranges // see traffic to any port in a range xem lưu lượng truy nhập từ dải công xác định
+
+`tcpdump portrange 21-23`
+
+* Lọc kích cỡ gói tin // chỉ thấy các gói tin theo một kích thước nhất định (theo byte)
+
+`tcpdump less 32`
+
+`tcpdump greater 128`
+
+hoặc
+
+`tcpdump > 32`
+
+`tcpdump <= 128`
+
+
+
 
 
