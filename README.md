@@ -110,6 +110,22 @@ tcpdump cho phép bạn lưu lại lưu lượng truy nhập bắt được thà
 
 `tcpdump -r capture_file`
 
+# Sáng tạo từ sự kết hợp
+
+Một biểu thức đơn có thể cho ta được kết quả mong muốn , nhưng sự kỳ diệu thực sự của tcpdump xuất phát từ khả năng kết hợp chúng theo những cách sáng tạo để cô lập một cách chính xác những gì bạn đang tìm kiếm. Có ba cách để làm kết hợp , và nếu bạn là dân IT thì các biểu thức logic sau đây khá là quen thuộc với chúng ta:
+
+1) AND
+  
+  `and hoặc &&`
+  
+2) OR
+
+  `or hoặc ||`
+  
+3) phủ định
+
+  `not hoặc ! `
+  
 
 
 
